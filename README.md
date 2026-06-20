@@ -3,6 +3,7 @@ See: https://github.com/addller/kalida_framework.git
 
 #EN_US
 Kalida was built based on the concept of triple attribution, identification by inspection, handling by controllers and actions and dilution of the http response in the composition of a view.
+
 The minimalist version, TAG.min.js, is only 19 kb.
 
 What would be the triple attribution? 
@@ -14,6 +15,7 @@ Note that an instruction has three functions in order to carry out the three act
 
 #PT_BR
 O Kalida foi construído com base no conceito de tripla atribuição, identificação por inspeção, manuseabilidade por controllers e actions e diluição da resposta http na composição de uma view.
+
 A versão minimalista, TAG.min.js tem apenas 19 kb.
 
 O que seria a tripla atribuição? 
