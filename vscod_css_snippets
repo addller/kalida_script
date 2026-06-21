@@ -1,0 +1,10 @@
+{
+	"Generate css with file name": {
+	"scope": "css",
+    "prefix": ["view css"],
+    "body": [
+        ".${TM_FILENAME_BASE}_${1:$view} {\n\t$0\n}"
+    ],
+    "description": "Cria uma classe CSS usando o nome do arquivo atual"
+	}
+}
