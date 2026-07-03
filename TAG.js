@@ -306,6 +306,7 @@ class JRequest{
     get = _ => this.send('GET')
     put = _ => this.send('PUT')
     delete = _ => this.send('DELETE')
+    query = _ => this.send('QUERY')
     
     addHeaders(...headers){
         let newHeaders = headers.flat(Infinity).map(header => {
