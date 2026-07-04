@@ -658,7 +658,7 @@ Below are the key features that distinguish Kalida from standard Vanilla JS libr
 
 ## Kalida Script’s Genuine Innovations
 
-*   **Automated Triple Assignment:** In traditional imperative libraries (like jQuery or pure Vanilla JS), you must create an element and then manually retrieve it or assign it to a variable. Kalida innovates by transforming the act of declaring a component (e.g., `A.inputEmail('meuInput')`) into the automatic creation of an instance property (e.g., `this.$meuInput`). This completely eliminates repetitive DOM selection code.
+*   **Automated Triple Assignment:** In traditional imperative libraries (like jQuery or pure Vanilla JS), you must create an element and then manually retrieve it or assign it to a variable. Kalida innovates by transforming the act of declaring a component (e.g., `A.inputEmail('myInput')`) into the automatic creation of an instance property (e.g., `this.$myInput`). This completely eliminates repetitive DOM selection code.
 
 *   **Total Abolition of Static HTML:** Frameworks like Angular, Vue, and Svelte attempt to extend HTML using directives. React uses JSX (JavaScript that transforms into object structures). Kalida innovates by removing HTML from the development workflow entirely. Everything—from structure and logic to event binding—is generated via method chaining in JavaScript at runtime, keeping the code 100% centered on pure objects.
 
