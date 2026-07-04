@@ -1,6 +1,6 @@
 This conversation took place with an LLM, using React as a point of comparison.
 
-If you only want to know about the innovative features, go to: The Real Innovations of Kalida Script.
+If you only want to know about the innovative features, go to: Kalida Script’s Genuine Innovations.
 
 You can also skip to the reference guide: Quick Reference Guide: React vs. Kalida Script.
 
