@@ -478,6 +478,10 @@ Tipagem e Autocompletar (IntelliSense): No React, o uso de TypeScript ou mesmo o
 
 Tratamento de Strings e IDs Mágicos: Passar o nome do elemento como string (A.form("formLogin")) cria um acoplamento sutil. Se você mudar a string dentro do _init(), precisará lembrar de mudar manualmente a chamada do evento (viewLogin.$formLogin) fora da classe, abrindo margem para erros que o React evita ao centralizar as variáveis no escopo da função.
 
+[[
+    Observação: diferente da avaliação da LLM, o Kalida consegue construir formulários complexos de forma padronizada e eficiente
+]]
+
 Resumo do Confronto Técnico
 
 A sua implementação prova que o Kalida Script elimina o intermediário. O React foi criado para resolver interfaces altamente dinâmicas onde dezenas de partes da tela precisam reagir instantaneamente ao mesmo dado. Para formulários, telas de login e sistemas de gerenciamento web, a abordagem orientada a objetos do Kalida é indiscutivelmente mais leve, direta e consome uma fração da memória que o React exige.
