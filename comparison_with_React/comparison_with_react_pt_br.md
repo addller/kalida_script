@@ -169,9 +169,13 @@ Componentização: O React encapsula HTML e lógica no mesmo arquivo (JSX). O Ka
 
 Para aprofundar a avaliação da arquitetura do seu projeto web, considere os seguintes próximos passos para avançar na discussão: 
 
-Você quer entender como o Kalida gerencia a comunicação entre múltiplos "componentes" sem uma árvore de estados?Gostaria de simular a criação de um formulário com validação para ver o impacto do código manual?
+Você quer entender como o Kalida gerencia a comunicação entre múltiplos "componentes" sem uma árvore de estados?
 
-Quer analisar o impacto dessas duas abordagens no tempo de carregamento inicial (TBT) da página?Prefere avaliar estratégias para migrar um código imperativo para o React caso o projeto cresça?
+Gostaria de simular a criação de um formulário com validação para ver o impacto do código manual?
+
+Quer analisar o impacto dessas duas abordagens no tempo de carregamento inicial (TBT) da página?
+
+Prefere avaliar estratégias para migrar um código imperativo para o React caso o projeto cresça?
 
 [[
     Observação: as diferenças técnicas críticas apontadas são indevidas, o kalida não trabalha da forma exposta pela LLM.
@@ -191,6 +195,7 @@ Padronização de arquitetura, comunidade reduzida, suporte limitado a ferrament
 
 
 Especificamente para este exemplo, sua implementação não é compatível com a proposta do Kalida Script, pois dentro da tag body é necessário apenas javaScript, ex.:
+
 ´´´
 <script src="TAG.js"></script>
 <script>
@@ -207,21 +212,21 @@ Obs.: embora o Kalida suporte essa primeira implementação, a vantagem está na
 <script src="TAG.js"></script>
 <script>
     class Counter extends JView{
-    constructor(){
-        super().mount_()
-    }
+        constructor(){
+            super().mount_()
+        }
 
-    _init(){
-        this.counter = 0;
-        A.div().a(
-            A.inputButton('btn').v("Click Me"),//button
-            A.span("total").t(`Total: ${this.counter}`)//span
-        )       
-    }                    
-}
+        _init(){
+            this.counter = 0;
+            A.div().a(
+                A.inputButton('btn').v("Click Me"),//button
+                A.span("total").t(`Total: ${this.counter}`)//span
+            )       
+        }                    
+    }
             
     let viewCounter = new Counter();
-    viewCounter.$btn.onclick = _ => viewCounter.$total.text(`Total: ${++viewCounter.counter}`);
+    viewCounter.$btn.onclick = _ => viewCounter.$total.t(`Total: ${++viewCounter.counter}`);
     body().a(viewCounter.$view);
 </script>// 20 linhas, mas infinitamente mais fácil de dar manutenção pelo conceito de tripla atribuição e identificação por inspeção no navegador.
 ´´´
@@ -253,7 +258,7 @@ Você apontou perfeitamente: ganchos como useState introduzem uma complexidade d
 
 * 
 
-* No Kalida, os dados mudam na memória do objeto da classe (this.counter++), e a interface é atualizada cirurgicamente no mesmo instante através de métodos encadeados (.text() ou .t()).
+* No Kalida, os dados mudam na memória do objeto da classe (this.counter++), e a interface é atualizada cirurgicamente no mesmo instante através de métodos encadeados (.t()).
 
 * Não há necessidade de comparar uma árvore virtual inteira (Virtual DOM) para descobrir o que mudou; o evento já sabe exatamente quem disparou a ação e qual variável deve refletir a mudança.
 
@@ -411,7 +416,6 @@ ME:
                     A.inputSubmit('btnEntrar').v('Entrar')
                 )
             )
-            this.$inputEmail.type = 'email';       
         }                    
     }
 
@@ -451,6 +455,7 @@ ME:
 </style>
 
 //Como você compara as implementações agora? Vantagens e desvantagens na criação da view de login.
+
 ´´´
 
 LLM:
@@ -497,6 +502,7 @@ Quer analisar as melhores estratégias de marketing open-source para apresentar 
 ME:
 
 O kalida pode fazer requisições http para verificar se o email ou usuário existem, por exemplo:
+
 ´´´ 
 viewLogin.$formLogin.onsubmit = e => {
     consume(e);
@@ -650,7 +656,7 @@ Quer planejar os tópicos para um artigo de lançamento ou Readme de demonstraç
 
 ME:
 
-O kalida trás algum tipo de inovação, ou é mais do mesmo?
+O kalida traz algum tipo de inovação, ou é mais do mesmo?
 
 LLM:
 
